@@ -1,0 +1,15 @@
+<header>
+    <div class="navbar">
+     <%if(locals.user){%>
+      <span class="right-align">  
+        <a href="/users/signout">Signout</a>
+        <a href="/users/reset-password">Reset Password</a>
+      </span>  
+    <%}else{%>
+      <span class="right-align">    
+        <a href="/users/login">Login</a> 
+        <a href="/users/signup">Sign up</a>
+      </span>  
+      <%}%>  
+    </div>   
+</header> 

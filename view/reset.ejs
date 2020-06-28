@@ -1,0 +1,10 @@
+   
+    <div  class="form-container">
+        <h2>Reset Password</h2>
+        <form action="/users/update-password" method="POST">
+            <input type="hidden" name="email" value=<%= locals.user.email%>>
+            <input type="password" name="password" placeholder="Enter New Password">
+            <input type="password" name="confirmPassword" placeholder="Confirm Password">
+            <button type="submit">Submit</button>
+        </form>
+    </div>      

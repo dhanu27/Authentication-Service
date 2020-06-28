@@ -1,0 +1,39 @@
+<html>
+   <head> 
+    <title>
+       Authentication
+    </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="/css/app.css"  type="text/css"> 
+
+    <%- style%>
+   </head> 
+   <body>
+    <%- include("header");%> 
+     <%- body %>
+   </body>
+   <%- script%>
+   <script>
+       
+        <%if(flash.success && flash.success.length>0){%>
+            new Noty({
+            theme: 'relax',
+            text:"<%= flash.success%>",
+            type: "success",
+            layout: 'topRight',
+            timeout: 1500
+        }).show(); 
+        <%}%>
+        <%if(flash.error&&flash.error.length>0){%>
+            new Noty({
+            theme: 'relax',
+            text:"<%= flash.error%>",
+            type: "error",
+            layout: 'topRight',
+            timeout: 1500
+        }).show(); 
+        <%}%>    
+   </script>
+</html>
